@@ -1,0 +1,116 @@
+/* ===== 画布层 ===== */
+#bgCanvas,
+#fxCanvas,
+#grainCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#bgCanvas { z-index: var(--z-canvas); }
+#grainCanvas { z-index: 1; opacity: 0.04; mix-blend-mode: overlay; }
+#fxCanvas { z-index: var(--z-fx); }
+
+/* ===== 区块 ===== */
+section {
+    min-height: 100vh;
+    position: relative;
+    z-index: var(--z-content);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--section-padding) 24px;
+    scroll-snap-align: start;
+}
+
+.section-inner {
+    max-width: var(--content-max);
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.section-number {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.section-divider {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--pink), transparent);
+    margin: 0 auto 32px;
+    opacity: 0.5;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.section-tag::before,
+.section-tag::after {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--pink));
+}
+
+.section-tag::after {
+    background: linear-gradient(90deg, var(--pink), transparent);
+}
+
+/* 区块背景光晕 */
+section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+section.in-view::before { opacity: 1; }
+
+#hero::before {
+    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(255, 107, 157, 0.08) 0%, transparent 70%);
+}
+
+#constellation::before {
+    background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
+}
+
+#memories::before {
+    background: radial-gradient(ellipse 55% 45% at 50% 50%, rgba(155, 89, 182, 0.07) 0%, transparent 70%);
+}
+
+#letter::before {
+    background: radial-gradient(ellipse 45% 40% at 50% 50%, rgba(255, 107, 157, 0.05) 0%, transparent 70%);
+}
+
+#interactive::before {
+    background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 77, 141, 0.06) 0%, transparent 70%);
+}
+
+#finale::before {
+    background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+}

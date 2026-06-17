@@ -1,0 +1,39 @@
+:root {
+    /* 主色 */
+    --pink: #ff6b9d;
+    --rose: #ff4d8d;
+    --purple: #9b59b6;
+    --violet: #7c3aed;
+    --gold: #ffd700;
+
+    /* 背景 */
+    --deep: #06030f;
+    --deep-mid: #0d0820;
+    --deep-light: #150f2e;
+
+    /* 效果 */
+    --glow: rgba(255, 107, 157, 0.55);
+    --glow-soft: rgba(255, 107, 157, 0.25);
+    --glass: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-strong: rgba(255, 255, 255, 0.07);
+
+    /* 字体 */
+    --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+    --font-body: 'Noto Serif SC', 'Cormorant Garamond', Georgia, serif;
+
+    /* 间距 */
+    --section-padding: clamp(60px, 10vh, 120px);
+    --content-max: 920px;
+
+    /* 动画 */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* 层级 */
+    --z-canvas: 0;
+    --z-content: 10;
+    --z-fx: 5000;
+    --z-ui: 8000;
+    --z-cursor: 10000;
+}
