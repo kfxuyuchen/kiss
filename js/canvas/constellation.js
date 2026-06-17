@@ -95,8 +95,8 @@ export function initConstellation(burst) {
             const a = points[l.a];
             const b = points[l.b];
             const grad = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
-            grad.addColorStop(0, 'rgba(255,107,157,0.5)');
-            grad.addColorStop(1, 'rgba(124,58,237,0.4)');
+            grad.addColorStop(0, 'rgba(255, 0, 128, 0.55)');
+            grad.addColorStop(1, 'rgba(191, 0, 255, 0.45)');
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
@@ -110,9 +110,9 @@ export function initConstellation(burst) {
             const glow = s.lit ? 0.75 + Math.sin(s.pulse) * 0.25 : 0.35;
             ctx.beginPath();
             ctx.arc(s.x, s.y, s.lit ? 7 : 4, 0, Math.PI * 2);
-            ctx.fillStyle = s.lit ? `rgba(255,107,157,${glow})` : 'rgba(255,255,255,0.35)';
+            ctx.fillStyle = s.lit ? `rgba(255, 0, 128, ${glow})` : 'rgba(255,255,255,0.35)';
             if (s.lit) {
-                ctx.shadowColor = '#ff6b9d';
+                ctx.shadowColor = '#ff0080';
                 ctx.shadowBlur = 18;
             }
             ctx.fill();

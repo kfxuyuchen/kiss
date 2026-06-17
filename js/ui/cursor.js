@@ -25,7 +25,7 @@ export function initCursor() {
         requestAnimationFrame(tick);
     })();
 
-    const hoverTargets = 'button, .memory-card, canvas, .btn, .nav-dot';
+    const hoverTargets = 'button, .memory-card, canvas, .btn, .nav-dot, #dreamCanvas';
     document.querySelectorAll(hoverTargets).forEach((el) => {
         el.addEventListener('mouseenter', () => {
             cursor.classList.add('hover');

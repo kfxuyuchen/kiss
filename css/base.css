@@ -20,7 +20,7 @@ body {
 }
 
 ::selection {
-    background: rgba(255, 107, 157, 0.35);
+    background: rgba(var(--pink-rgb), 0.35);
     color: #fff;
 }
 
@@ -32,17 +32,19 @@ h1, h2, h3 {
 h1 {
     font-size: clamp(2.5rem, 8vw, 5.5rem);
     line-height: 1.08;
-    background: linear-gradient(135deg, #fff 0%, var(--pink) 45%, var(--purple) 85%, var(--violet) 100%);
+    background: var(--gradient-text);
+    background-size: 200% auto;
+    animation: textFlow 6s ease-in-out infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 40px rgba(255, 107, 157, 0.25));
+    filter: drop-shadow(0 0 40px rgba(var(--pink-rgb), 0.35));
 }
 
 h2 {
     font-size: clamp(1.8rem, 5vw, 3.2rem);
     margin-bottom: 24px;
-    text-shadow: 0 0 30px rgba(255, 107, 157, 0.35);
+    text-shadow: 0 0 30px rgba(var(--pink-rgb), 0.4), 0 0 60px rgba(var(--cyan-rgb), 0.15);
 }
 
 .subtitle {

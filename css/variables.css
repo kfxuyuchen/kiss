@@ -1,22 +1,32 @@
 :root {
-    /* 主色 */
-    --pink: #ff6b9d;
-    --rose: #ff4d8d;
-    --purple: #9b59b6;
-    --violet: #7c3aed;
-    --gold: #ffd700;
+    /* 方案 A · 赛博霓虹 */
+    --pink: #ff0080;
+    --rose: #ff0080;
+    --cyan: #00f5ff;
+    --purple: #bf00ff;
+    --violet: #bf00ff;
+    --gold: #00f5ff;
+
+    --pink-rgb: 255, 0, 128;
+    --cyan-rgb: 0, 245, 255;
+    --purple-rgb: 191, 0, 255;
 
     /* 背景 */
-    --deep: #06030f;
-    --deep-mid: #0d0820;
-    --deep-light: #150f2e;
+    --deep: #030014;
+    --deep-mid: #080022;
+    --deep-light: #0f0035;
 
     /* 效果 */
-    --glow: rgba(255, 107, 157, 0.55);
-    --glow-soft: rgba(255, 107, 157, 0.25);
+    --glow: rgba(255, 0, 128, 0.65);
+    --glow-cyan: rgba(0, 245, 255, 0.55);
+    --glow-soft: rgba(255, 0, 128, 0.28);
     --glass: rgba(255, 255, 255, 0.04);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-strong: rgba(255, 255, 255, 0.07);
+    --glass-border: rgba(0, 245, 255, 0.12);
+    --glass-strong: rgba(255, 255, 255, 0.06);
+
+    /* 渐变 */
+    --gradient-neon: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan));
+    --gradient-text: linear-gradient(135deg, #fff 0%, var(--pink) 35%, var(--cyan) 70%, var(--purple) 100%);
 
     /* 字体 */
     --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;

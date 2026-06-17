@@ -16,7 +16,7 @@
     position: fixed;
     width: 36px;
     height: 36px;
-    border: 1px solid rgba(255, 107, 157, 0.45);
+    border: 1px solid rgba(var(--cyan-rgb), 0.35);
     border-radius: 50%;
     pointer-events: none;
     z-index: calc(var(--z-cursor) - 1);
@@ -33,7 +33,7 @@
     top: 0;
     left: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--rose), var(--purple), var(--pink), var(--gold));
+    background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan), var(--pink));
     background-size: 200% 100%;
     animation: progressShimmer 4s linear infinite;
     z-index: var(--z-ui);
@@ -112,14 +112,14 @@
 }
 
 .music-btn:hover {
-    background: rgba(255, 107, 157, 0.15);
+    background: rgba(var(--pink-rgb), 0.15);
     transform: scale(1.08);
-    border-color: rgba(255, 107, 157, 0.3);
+    border-color: rgba(var(--pink-rgb), 0.35);
 }
 
 .music-btn.playing {
-    background: rgba(255, 107, 157, 0.2);
-    border-color: rgba(255, 107, 157, 0.4);
+    background: rgba(var(--pink-rgb), 0.22);
+    border-color: rgba(var(--cyan-rgb), 0.45);
     box-shadow: 0 0 24px var(--glow-soft);
 }
 
@@ -154,8 +154,8 @@
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, rgba(255, 107, 157, 0.25), rgba(124, 58, 237, 0.2));
-    border: 1px solid rgba(255, 107, 157, 0.45);
+    background: linear-gradient(135deg, rgba(var(--pink-rgb), 0.28), rgba(var(--purple-rgb), 0.2));
+    border: 1px solid rgba(var(--cyan-rgb), 0.4);
 }
 
 .btn-primary::before {
@@ -171,7 +171,7 @@
 
 .btn-primary:hover {
     transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(255, 107, 157, 0.35);
+    box-shadow: 0 8px 32px rgba(var(--pink-rgb), 0.4), 0 0 20px rgba(var(--cyan-rgb), 0.15);
     border-color: transparent;
 }
 
@@ -186,7 +186,7 @@
 
 .btn-outline:hover {
     background: var(--pink);
-    box-shadow: 0 0 40px var(--glow), 0 0 80px rgba(255, 107, 157, 0.25);
+    box-shadow: 0 0 40px var(--glow), 0 0 80px rgba(var(--cyan-rgb), 0.25);
     transform: scale(1.06);
 }
 

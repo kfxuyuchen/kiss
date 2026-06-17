@@ -44,7 +44,9 @@
 
     .finale-stats { gap: 32px; }
 
-    .btn { padding: 12px 28px; font-size: 0.9rem; }
+    .dream-scene-wrap { height: 320px; }
+
+    .dream-actions { gap: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

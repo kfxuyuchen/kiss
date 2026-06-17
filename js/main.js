@@ -9,6 +9,7 @@ import { initBackground, initGrain } from './canvas/background.js';
 import { initEffects, burst, launchFireworks } from './canvas/effects.js';
 import { initConstellation, getStarCount } from './canvas/constellation.js';
 import { initHeartGame } from './canvas/heartGame.js';
+import { initDreamScene } from './canvas/dreamScene.js';
 
 function bindContent() {
     document.title = CONFIG.title;
@@ -30,6 +31,12 @@ function bindContent() {
 
     const signEl = document.getElementById('letterSign');
     if (signEl) signEl.textContent = CONFIG.letter.signature;
+
+    const dreamHint = document.getElementById('dreamHint');
+    if (dreamHint) dreamHint.textContent = CONFIG.dream.hint;
+
+    const driveBtn = document.getElementById('driveBtn');
+    if (driveBtn) driveBtn.textContent = CONFIG.dream.driveButton;
 
     renderMemoryCards(CONFIG.memories.cards);
 }
@@ -70,6 +77,7 @@ function init() {
     initGrain();
     initEffects();
     initConstellation(burst);
+    initDreamScene(burst);
     initHeartGame(burst, updateStats);
     initCards(burst);
     initTyping();

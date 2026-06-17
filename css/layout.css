@@ -92,25 +92,29 @@ section::before {
 section.in-view::before { opacity: 1; }
 
 #hero::before {
-    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(255, 107, 157, 0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(var(--pink-rgb), 0.1) 0%, transparent 70%);
 }
 
 #constellation::before {
-    background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(var(--purple-rgb), 0.08) 0%, transparent 70%);
 }
 
 #memories::before {
-    background: radial-gradient(ellipse 55% 45% at 50% 50%, rgba(155, 89, 182, 0.07) 0%, transparent 70%);
+    background: radial-gradient(ellipse 55% 45% at 50% 50%, rgba(var(--purple-rgb), 0.07) 0%, transparent 70%);
 }
 
 #letter::before {
-    background: radial-gradient(ellipse 45% 40% at 50% 50%, rgba(255, 107, 157, 0.05) 0%, transparent 70%);
+    background: radial-gradient(ellipse 45% 40% at 50% 50%, rgba(var(--pink-rgb), 0.06) 0%, transparent 70%);
+}
+
+#dream::before {
+    background: radial-gradient(ellipse 60% 50% at 50% 55%, rgba(var(--cyan-rgb), 0.08) 0%, rgba(var(--pink-rgb), 0.05) 50%, transparent 75%);
 }
 
 #interactive::before {
-    background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 77, 141, 0.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(var(--pink-rgb), 0.07) 0%, transparent 70%);
 }
 
 #finale::before {
-    background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(var(--pink-rgb), 0.12) 0%, rgba(var(--cyan-rgb), 0.06) 50%, transparent 75%);
 }

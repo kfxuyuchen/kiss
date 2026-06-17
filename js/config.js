@@ -78,11 +78,20 @@ export const CONFIG = {
         buttonText: '🎆 释放烟花',
     },
 
+    dream: {
+        tag: 'Our Dream',
+        title: '车与房子',
+        subtitle: '开着小车，驶向我们的家\n点击汽车出发，点击大房子点亮灯光',
+        hint: '🚗 点击小汽车或下方按钮，驶向大房子',
+        driveButton: '🚗 出发回家',
+    },
+
     nav: [
         { id: 'hero', label: '开始' },
         { id: 'constellation', label: '星座' },
         { id: 'memories', label: '回忆' },
         { id: 'letter', label: '情书' },
+        { id: 'dream', label: '梦想' },
         { id: 'interactive', label: '互动' },
         { id: 'finale', label: '终章' },
     ],

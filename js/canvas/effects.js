@@ -12,7 +12,7 @@ class Particle {
         this.vx = rand(-5, 5);
         this.vy = rand(-5, 5);
         this.size = rand(2, 5);
-        this.hue = hue ?? rand(320, 360);
+        this.hue = hue ?? (Math.random() > 0.5 ? rand(310, 340) : rand(175, 195));
         this.life = 0;
         this.maxLife = rand(45, 85);
         this.gravity = 0.06;
@@ -41,7 +41,7 @@ class Rose {
         this.size = size ?? rand(25, 48);
         this.rotation = Math.random() * Math.PI * 2;
         this.rotSpeed = rand(-0.02, 0.02);
-        this.hue = rand(328, 360);
+        this.hue = rand(310, 340);
         this.life = 0;
         this.maxLife = 320;
         this.petals = Math.floor(rand(6, 10));
@@ -85,7 +85,7 @@ class Rose {
 class Firework {
     constructor(x, y) {
         this.particles = [];
-        const hue = rand(300, 360);
+        const baseHue = Math.random() > 0.5 ? rand(310, 340) : rand(175, 195);
         for (let i = 0; i < 90; i++) {
             const angle = rand(0, Math.PI * 2);
             const speed = rand(2, 9);
@@ -93,7 +93,7 @@ class Firework {
                 x, y,
                 vx: Math.cos(angle) * speed,
                 vy: Math.sin(angle) * speed,
-                hue: hue + rand(-25, 25),
+                hue: baseHue + rand(-20, 20),
                 life: 0,
                 maxLife: rand(65, 110),
                 size: rand(2, 4.5),
